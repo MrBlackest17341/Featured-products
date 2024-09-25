@@ -1,0 +1,181 @@
+* {
+    max-width: 1440px;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+header {
+    padding: 60px 40px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+header h1 {
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.products-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    justify-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.product-container {
+    text-align: center; 
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    height: 377px;
+    border-radius: 16px;
+    background: #F7F8FB;
+    transition: transform 0.3s ease;
+}
+
+.product-image,
+.product-image-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.product-image-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-card:hover .product-image {
+    opacity: 0;
+}
+
+.product-card:hover .product-image-hover {
+    display: block;
+    opacity: 1;
+}
+
+.product-container h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.product-container p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.faq-accordion-section {
+    display: flex;
+    padding: 60px;
+    margin-top: 120px;
+    margin-right: 80px;
+}
+
+.faq-accordion-section h1, p {
+    margin-bottom: 10px;
+    text-align: left;
+    margin-right: 60px;
+}
+
+.faq-accordion-section h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+}
+
+.footer {
+    white-space: nowrap;
+}
+
+.faq-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.faq-subtitle span {
+    text-decoration: underline;
+}
+
+.accordion-section {
+    display: flex; 
+    flex-wrap: wrap; 
+    max-width: 640px; 
+    margin-top: 25px;
+    justify-content: flex-start;
+    margin-left: 80px; 
+}
+
+.accordion-item {
+    width: 100%;
+    max-width: 640px; 
+    border-radius: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    background: #F7F8FB; 
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header h1 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.accordion-header img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 24px;
+
+}
